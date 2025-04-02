@@ -1,17 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proiectele mele</title>
+
+  <!-- Link către Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Stiluri personalizate */
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #4CAF50;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .project-item {
+      background-color: #fff;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-item a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .project-item a:hover {
+      color: #388E3C;
+      text-decoration: underline;
+    }
+
+    /* Loading animation */
+    #loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: #4CAF50;
+      display: none;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<h2> Proiectele mele</h2>
-<ul>
-    <li><a href="https://ecaterinat.github.io/LoveCamper/">Proiect 1: Love Camper</a></li>
-    
-    <li><a href="https://ecaterinat.github.io/loto/">Proiect 2: Loto</a></li>
 
-    <li><a href="https://ecaterinat.github.io/ToDo-List---React/">Proiect 3: To-Do List in React</a></li>
+  <!-- Animație Loading -->
+  <div id="loading">Încărcare...</div>
 
-    <li><a href="https://ecaterinat.github.io/cosmos/">Proiect 4: Cosmos</a></li>
-    
-  </ul>
+  <div class="container py-5">
+    <h1>Proiectele mele</h1>
+    <h2>Click pe un proiect pentru a-l vizualiza</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="project-item">
+          <a href="https://ecaterinat.github.io/LoveCamper/">Proiect 1: Love Camper</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="project-item">
+          <a href="https://ecaterinat.github.io/loto/">Proiect 2: Loto</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="project-item">
+          <a href="https://ecaterinat.github.io/ToDo-List---React/">Proiect 3: To-Do List in React</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="project-item">
+          <a href="https://ecaterinat.github.io/cosmos/">Proiect 4: Cosmos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripturile Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Script pentru a ascunde animația de loading când pagina este complet încărcată -->
+  <script>
+    window.onload = function() {
+      document.getElementById("loading").style.display = "none";
+    };
+  </script>
+
 </body>
 </html>
